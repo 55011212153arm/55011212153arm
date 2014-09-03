@@ -18,7 +18,13 @@ class LabZoo {
         animaldetail
         
     }
+    func showAnimal(animal:String){
+        for animal in animaldetail{
+            println("555")
+        }
+    }
     
 }
-let add = LabZoo(animal: "Duck", detail: "Liverpool")
+var add = LabZoo(animal: "Duck", detail: "Liverpool")
 add.addAnimal("Bat", detail: "Flying Rat")
+add.showAnimal("Bat")
