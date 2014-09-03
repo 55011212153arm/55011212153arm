@@ -33,6 +33,7 @@ class LabZoo {
 var arm = LabZoo(animal: "Duck", detail: "Liverpool")
 arm.addAnimal("Bat", detail: "Flying Rat")
 arm.removeAnimal("Bat")
+arm.addAnimal("Cat", detail: "Little Tiger")
 arm.showAnimal()
 
 
