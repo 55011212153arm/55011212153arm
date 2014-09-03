@@ -20,7 +20,7 @@ class LabZoo {
     }
     func showAnimal(animal:String){
         for animal in animaldetail{
-            println("555")
+            println("")
         }
     }
     
