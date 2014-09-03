@@ -1,6 +1,6 @@
 // Playground - noun: a place where people can play
 
-class zoo555 {
+class LabZoo {
     
     var animal:String
     var detail:String
@@ -20,5 +20,5 @@ class zoo555 {
     }
     
 }
-let add = zoo555(animal: "Duck", detail: "Liverpool")
+let add = LabZoo(animal: "Duck", detail: "Liverpool")
 add.addAnimal("Bat", detail: "Flying Rat")
