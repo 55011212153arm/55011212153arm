@@ -5,6 +5,7 @@ class LabZoo {
     var animal:String
     var detail:String
     var animaldetail:[String:String]
+
     
     init (animal:String,detail:String){
         self.animal = animal
