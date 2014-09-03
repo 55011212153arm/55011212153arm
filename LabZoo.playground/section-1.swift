@@ -35,7 +35,6 @@ arm.addAnimal("Bat", detail: "Flying Rat")
 arm.removeAnimal("Bat")
 arm.showAnimal()
 
-var sss:[String:String]=["a":"dsad"]
-var s="a"
 
-println("\(sss[s])")
+
+
