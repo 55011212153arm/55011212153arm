@@ -18,13 +18,23 @@ class LabZoo {
         animaldetail
         
     }
-    func showAnimal(animal:String){
-        for animal in animaldetail{
-            println("")
+    func removeAnimal(animal:String){
+        for i in animaldetail.keys {
+            if i == animal {
+            animaldetail[animal] = nil
+            animaldetail
+            }
         }
     }
     
+    
+    
 }
-var add = LabZoo(animal: "Duck", detail: "Liverpool")
-add.addAnimal("Bat", detail: "Flying Rat")
-add.showAnimal("Bat")
+var arm = LabZoo(animal: "Duck", detail: "Liverpool")
+arm.addAnimal("Bat", detail: "Flying Rat")
+arm.removeAnimal("Bat")
+
+var sss:[String:String]=["a":"dsad"]
+var s="a"
+
+println("\(sss[s])")
