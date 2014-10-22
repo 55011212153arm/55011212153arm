@@ -20,8 +20,9 @@ class ViewController: UIViewController,ColorTwoViewControllerDelegate {
         colorLabel.text = "Co: " + text
         controller.navigationController?.popViewControllerAnimated(true)
     }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "mySegue"{
+        if segue.identifier == "mysegue"{
             let vc = segue.destinationViewController as colorTwoController
             vc.colorString = colorLabel.text!
             vc.delegate = self
