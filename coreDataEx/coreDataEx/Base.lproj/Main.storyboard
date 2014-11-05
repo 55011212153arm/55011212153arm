@@ -24,6 +24,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="PbU-xi-5Mo">
+                        <barButtonItem key="leftBarButtonItem" title="Delete" id="C4e-A8-03q">
+                            <connections>
+                                <action selector="deleteItem:" destination="vXZ-lx-hvc" id="opD-Tk-0yJ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="5Op-Oj-noI">
                             <connections>
                                 <action selector="addItem:" destination="vXZ-lx-hvc" id="WWP-oP-zzV"/>

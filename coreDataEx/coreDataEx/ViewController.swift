@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     var items = [NSManagedObject]()
     
     @IBAction func addItem(sender: AnyObject) {
-        var alert = UIAlertController(title: "New Item", message: "Add a new Item", preferredStyle: .Alert)
+        var alert = UIAlertController(title: "New Item", message: "Add a new Item", preferredStyle : .Alert)
         
         let saveAction = UIAlertAction(title: "Save", style: .Default) { (action: UIAlertAction!) -> Void in
             let textFiled = alert.textFields![0] as UITextField
@@ -38,6 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         presentViewController(alert, animated: true, completion: nil)
 
     }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -67,6 +68,25 @@ class ViewController: UIViewController, UITableViewDataSource {
             println("Could not save \(error), \(error?.userInfo)")
         }
         items.append(item)
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        let fetchRequest = NSFetchRequest(entityName: "Item")
+        
+        var error: NSError?
+        
+        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as [NSManagedObject]?
+        
+        if let result = fetchedResults {
+            items = result
+        }else{
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
     }
 
     override func viewDidLoad() {
